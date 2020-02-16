@@ -2,8 +2,7 @@
   <div class="container">
     <md-card>
       <md-card-header class="header">
-        <div class="md-title">My Tasks</div>
-        <div class="md-subhead">To do list</div>
+        <div class="md-title">To do...</div>
       </md-card-header>
       <md-card-content>
         <md-field>
@@ -11,7 +10,7 @@
             class="taskadd"
             v-model="currentTodo"
             @keydown.enter="addTodo()"
-            placeholder="Add a task"
+            placeholder="add task"
           ></md-input>
         </md-field>
         <div class="todo-list">
@@ -34,6 +33,7 @@
                 <div v-if="todo.editing">
                   <md-field>
                     <md-input
+                      class="edit"
                       type="text"
                       v-model="todo.label"
                       @keyup.enter="stopEdit(todo)"
@@ -103,39 +103,50 @@ export default {
 </script>
 
 <style>
+body {
+  background-color: #80acca;
+}
 .md-card {
-  max-width: 1200px;
-  margin: 30px auto;
-  border-color: black;
+  max-width: auto;
+  margin: auto;
+  color: #4244c4f3;
+  background: #80acca;
 }
 .header {
   text-align: center;
-  background: rgb(80, 34, 34);
-  color: white;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 84, 240, 0.781),
+    #80acca
+  ) !important;
+  color: white !important;
+  font-weight: bold;
 }
+
 .md-title {
-  font-size: 5em !important;
-}
-.md-subhead {
-  margin-top: 40px !important;
-  margin-bottom: 10px !important;
-  font-size: 3em !important;
+  font-size: 3rem !important;
+  color: white;
+  font-weight: bold;
 }
 
 .taskadd {
-  font-size: 0.2em !important;
+  font-size: 1.5rem !important;
+  color: white;
 }
 .md-card-content {
-  margin-left: 10px;
-  font-size: 10px !important;
+  margin-right: 100px;
+  margin-left: 100px;
+  font-size: 1.5rem !important;
+  color: white;
 }
+
 .md-field {
-  min-width: 300px !important;
+  min-width: 400px !important;
   max-width: 400px;
-  border-bottom: 1px solid;
-  border-color: black;
+  border-bottom: 1px solid white;
   font-size: 3em !important;
 }
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -146,21 +157,24 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid;
-  border-color: black;
+  border-bottom: 1px solid white;
+}
+
+.edit {
+  color: white;
 }
 .todo-item-label {
   margin-left: 30px;
 }
 .is-complete {
   text-decoration: line-through;
-  color: black;
+  color: white;
 }
 .btn-edit {
-  color: #000000;
+  color: white;
 }
 .btn-delete {
-  color: #da0202;
+  color: rgba(0, 84, 240, 0.781);
 }
 .completed {
   transform: scale(1.5);
