@@ -104,47 +104,44 @@ export default {
 
 <style>
 body {
-  background-color: #80acca;
+  background-color: #6279c5;
 }
 .md-card {
-  max-width: auto;
+  max-width: 900px;
   margin: auto;
-  color: #4244c4f3;
-  background: #80acca;
+  color: rgba(10, 67, 94, 0.651);
+  background: #ffffff;
+  font-weight: 500;
 }
 .header {
   text-align: center;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 84, 240, 0.781),
-    #80acca
-  ) !important;
-  color: white !important;
-  font-weight: bold;
+  background: linear-gradient(to bottom, #6279c5, #ffffff) !important;
+  height: 130px;
 }
 
 .md-title {
   font-size: 3rem !important;
-  color: white;
+  color: rgba(10, 67, 94, 0.651);
   font-weight: bold;
+  padding: 30px;
 }
 
 .taskadd {
   font-size: 1.5rem !important;
-  color: white;
+  color: rgba(10, 67, 94, 0.651);
+  font-weight: 500;
 }
 .md-card-content {
   margin-right: 100px;
   margin-left: 100px;
   font-size: 1.5rem !important;
-  color: white;
+  background-color: #ffffff;
 }
 
 .md-field {
-  min-width: 400px !important;
-  max-width: 400px;
-  border-bottom: 1px solid white;
-  font-size: 3em !important;
+  min-width: 300px !important;
+  max-width: 500px;
+  border-bottom: 1px dotted rgba(10, 67, 94, 0.651);
 }
 
 ul {
@@ -157,24 +154,24 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid white;
+  border-bottom: 1px dotted rgba(10, 67, 94, 0.651);
 }
 
 .edit {
-  color: white;
+  color: rgba(10, 67, 94, 0.651);
 }
 .todo-item-label {
   margin-left: 30px;
 }
 .is-complete {
   text-decoration: line-through;
-  color: white;
+  color: rgba(10, 67, 94, 0.651);
 }
 .btn-edit {
-  color: white;
+  color: rgba(10, 67, 94, 0.651);
 }
 .btn-delete {
-  color: rgba(0, 84, 240, 0.781);
+  color: rgba(10, 67, 94, 0.651);
 }
 .completed {
   transform: scale(1.5);
